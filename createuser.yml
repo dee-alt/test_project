@@ -1,7 +1,8 @@
 ---
 - name: Create New Users
   become: true
-  hosts: all
+  remote_user: lynis
+  become_method: sudo
   gather_facts: true
   tasks:
    - name: Create User Task
