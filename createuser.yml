@@ -1,0 +1,16 @@
+---
+- name: Create New Users
+  become: true
+  hosts: all
+  gather_facts: true
+  tasks:
+   - name: Create User Task
+     user:
+       name: lynis1
+       state: present
+       password: '$6$rounds=656000$qM62BnCT/LZEn93P$PG2T7.zHDRV1/OYSjj/06sJI/g43Pwmngbzd6zynKhG6VlXJOYpRcg8VlZlrIOukZrJbTIT4c.Y95vv2vu19H/'
+       shell: /bin/bash
+       system: no
+       createhome: yes
+       home: /home/lynis1
+    

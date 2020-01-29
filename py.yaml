@@ -1,0 +1,17 @@
+---
+- hosts: all
+  become: true
+  remote_user: lynis
+  become_method: sudo
+  gather_facts: True
+  tasks:
+   - name: Copy file
+     copy:
+       src: /root/portopen.py
+       dest: /home/lynis/test.py 
+   - name: Executing the PYTHON SCRIPT
+     command: /home/lynis/test.py 
+     register: ServerCheck
+   - debug: var={{ item }}
+     with_items:
+       - ServerCheck.stdout
