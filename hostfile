@@ -1,1 +1,1 @@
-192.168.23.148
+192.168.23.148 host_key_checking = False 
