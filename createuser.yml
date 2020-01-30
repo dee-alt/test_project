@@ -1,6 +1,6 @@
 ---
 - name: Create New Users
-  become: true
+  become: yes
   hosts: all
   remote_user: lynis
   become_method: sudo
