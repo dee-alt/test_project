@@ -2,7 +2,7 @@
 - name: Create New Users
   become: yes
   hosts: all
-  remote_user: root
+  remote_user: lynis
   become_method: sudo
   gather_facts: true
   tasks:
